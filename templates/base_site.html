@@ -1,0 +1,33 @@
+﻿{% extends "base.html" %}
+{% block header %}
+	<h1>Живая вода</h1>
+	<div id='slogan'>здоровье, красота, гармония</div>
+{% endblock %}
+{% block navigate %}
+				<div><a href='/home'>Главная</a></div>
+				<div><a href='/news/'>Здоровье</a></div>
+				<div><a href='#'>Красота</a></div>
+				<div><a href='#'>Читалка</a></div>
+				<div><a href='#'>Тема недели</a></div>
+				<div><a href='#'>Обсуждения</a></div>
+				<div><a href='#'>Контакты</a></div>
+{% endblock %}
+{% block auth %}
+	{% if user.is_authenticated %}
+		<div id='auth'>
+			<a href="/user/info">{{ user.username }}</a>
+			<a href="/logout">Выход</a>
+			{% if perms.news.can_topic_change %}
+				<a href="/news/add">Добавить новость</a>
+			{% endif %}
+			{% if user.is_staff %}
+				<a href="/manage">Управление</a>
+			{% endif %}
+		</div>
+	{% else %}
+		<div id='login'>
+			<a href="/auth">Войти</a>
+			<a href="/registration">Зарегистрироваться</a>
+		</div>
+	{% endif %}
+{% endblock %}

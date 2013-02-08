@@ -1,0 +1,97 @@
+body, html { 
+	height: 100%;
+	position:relative;
+	margin:0px;
+	padding:0px;
+	text-align: center;
+	position: relative;
+	font-family: Arial;
+	background:url(/media/img/1123.jpg) #0a181b repeat;
+}
+
+span {
+	font-family: Arial;
+}
+
+a:hover {
+	color: #2D81FF;
+}
+
+a:link {
+	color: #2D81FF;
+}
+
+a:active {
+	color: #2D81FF;
+}
+
+a:visited {
+	color: #2D81FF;
+}
+
+#ev_bg {
+	width: 1024px;
+	min-height: 95%;
+	margin: 0 auto;
+	padding-top: 0px;
+	text-align: left;
+	clear: both;
+	position: relative;
+	background: #AAFFFF;
+}
+
+#content {
+	overflow-x: hidden;
+}
+
+#header {
+	text-align: center;
+	clear: both;
+	height: 200px;
+	border: solid 1px black;
+}
+
+#slogan {
+	margin: 10px 10%;
+	text-align: right;
+}
+
+#navigate {
+	text-align:center;
+	padding: 5px 5%;
+}
+
+#navigate div{
+	float:left;
+	width: 14%;
+}
+
+#navigate a{
+	display: block;
+	text-decoration: none;
+	font-family: fantasy;
+}
+
+#navigate a:hover{
+	background: #DDDDDD
+}
+
+#login{
+	padding: 5px;
+}
+
+#center{
+	clear: both;
+}
+
+#footer {
+	position: absolute;
+	padding: 10px 70px;
+	clear: both;
+	bottom: 0px;
+	width: 100%;
+}
+
+#footer .name{
+	color: #2D81FF;
+}

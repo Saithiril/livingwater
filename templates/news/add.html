@@ -1,0 +1,11 @@
+﻿{% extends "base_site.html" %}
+
+{% block center %}
+	{% if form.errors %}
+		{{ form.errors|pluralize }}
+	{% endif %}
+		<form method="post" action="addComplete">{% csrf_token %}
+			{{ form.as_table }}
+			<input type="submit" name="login"/>
+		</form>
+{% endblock %}

@@ -1,0 +1,49 @@
+﻿{% extends "base_site.html" %}
+{% block center %}
+	{% if form.errors %}
+		{{ form.errors|pluralize }}
+	{% endif %}
+		<form method="post" action="signup">{% csrf_token %}
+			{{ form.as_table }}
+			<input type="submit" name="singin"/>
+		</form>
+		<!-- <div class="topic_name">
+			<span>Вход</span>
+		</div>
+		<div id="reg">
+			<form method="post" action="signup">{% csrf_token %}
+				{{ form.non_field_errors }}
+				{{ form.subject.errors }}
+				{{ form.password.errors }}
+				{{ form.email.errors }}
+				{{ form.date_of_birth.errors }}
+				<div class="string">
+					<div><span>Логин</span></div>
+					{{ form.subject }}
+				</div>
+				<div class="string">
+					<div><span>Пароль</span></div>
+					{{ form.password }}
+				</div>
+				<div class="string">
+					<div><span>Повтор</span></div>
+					{{ form.re_password }}
+				</div>
+				{% if errors %}
+					<p class="error">Введенные пароли не совпадают</p>
+				{% endif %}
+				<div class="string">
+					<div><span>E-mail</span></div>
+					{{ form.email }}
+				</div>
+				<div class="string">
+					<div><span>Дата рождения</span></div>
+					{{ form.date_of_birth }}
+				</div>
+				<input type="submit" name="singin"/>
+			</form>
+		</div> -->
+{% endblock %}
+{% block auth %}
+	<br/>
+{% endblock %}

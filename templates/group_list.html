@@ -1,0 +1,13 @@
+﻿{% extends "base_site.html" %}
+{% block center %}
+	{% if groups_list %}
+		<ul>
+		{% for group in groups_list %}
+			<li><a href="/manage/groups/{{ group.id }}/">{{ group.name }}</a></li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>Группы не найдены</p>
+	{% endif %}
+	<a href="/manage/groups/add">Добавить группу</a>
+{% endblock %}

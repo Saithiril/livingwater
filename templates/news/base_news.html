@@ -1,0 +1,14 @@
+﻿{% extends "base_site.html" %}
+
+{% block center %}
+	{% if news %}
+		<ul>
+		{% for topic in news %}
+			<li><a href="/news/{{ topic.id }}/">{{ topic.title }}</a></li>
+			автор: {{ topic.author }}
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>No news are available.</p>
+	{% endif %}
+{% endblock %}

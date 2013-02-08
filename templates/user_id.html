@@ -1,0 +1,9 @@
+﻿{% extends "base_site.html" %}
+{% block center %}
+	<p>Логин: {{ user_info.username }}</p>
+	<p>Имя: {{ user_info.first_name|default:"Не указано" }}</p>
+	<p>Фамилия: {{ user_info.first_name|default:"Не указано" }}</p>
+	<p>Электронная почта: {{ user_info.email }}</p>
+	<p>Дата регистрации: {{ user_info.date_joined }}</p>
+	<a href="/user/edit">Редактировать</a>
+{% endblock %}

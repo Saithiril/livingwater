@@ -1,0 +1,11 @@
+﻿{% extends "base_site.html" %}
+
+{% block center %}
+	{{ news.title }}<br/>
+	{{ news.text }}<br/>
+	{% if user.is_authenticated %}
+		{% if perms.news.can_change %}
+			<a href='delete'>Удалить</a>
+		{% endif %}
+	{% endif %}
+{% endblock %}

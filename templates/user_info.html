@@ -1,0 +1,15 @@
+﻿{% extends "base_site.html" %}
+{% block center %}
+	<p>Логин: {{ user.username }}</p>
+	<p>Имя: {{ user.first_name|default:"Не указано" }}</p>
+	<p>Фамилия: {{ user.first_name|default:"Не указано" }}</p>
+	<p>Электронная почта: {{ user.email }}</p>
+	<p>Дата регистрации: {{ user.date_joined }}</p>
+	<br/>
+	<p>Дата рождения: {{ lv_user.date_of_birth|default:"Не указано" }}</p>
+	<p>Скайп: {{ lv_user.skype|default:"Не указано" }}</p>
+	<p>Город: {{ lv_user.city|default:"Не указано" }}</p>
+	<p>Страна: {{ lv_user.country|default:"Не указано" }}</p>
+	<br/>
+	<a href="/user/edit">Редактировать</a>
+{% endblock %}

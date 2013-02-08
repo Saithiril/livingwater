@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>{% block title %}Живая вода{% endblock %}</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+		<link rel="stylesheet" type="text/css" href={% block css_file %}"/media/css/style.css"{% endblock %}/>
+		<script src="/media/scripts/script.js"></script>
+	</head>
+	<body>
+		<div id="ev_bg"><div id="content">
+			<div id=header>
+				{% block header %}{% endblock %}
+			</div>
+			<div id=time>
+				{% block time %}{% endblock %}
+			</div>
+			<div id=auth>
+				{% block auth %}{% endblock %}
+			</div>
+			<div id=navigate>
+				{% block navigate %}{% endblock %}
+			</div>
+			<div id=center>
+				{% block center %}{% endblock %}
+			</div>
+			<div id="footer">
+				<p>©2013 <span class="name">Saitihril<span>. </p>
+			</div>
+		</div></div>
+	</body>
+</html>

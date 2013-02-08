@@ -1,0 +1,7 @@
+﻿{% extends "base_site.html" %}
+{% block center %}
+	<form method="post" action="/manage/add_group">{% csrf_token %}
+		<input type="text" name='groupname'><br/>
+		<input type="submit" name="add_group"/>
+	</form>
+{% endblock %}
